@@ -20,7 +20,7 @@ export async function signInConttroler(req, res) {
             VALUES ($1, $2)
             `, [user.rows[0].id, token])
         } else {
-            res.status(422).send("Usuário ou senha incorreta");
+            res.status(401).send("Usuário ou senha incorreta");
         }
 
     } catch(e) {
