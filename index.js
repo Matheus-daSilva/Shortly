@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import authRouter from "./routes/authRouter.js"
 import linksRouter from "./routes/linksRouter.js";
+import usersRouter from "./routes/usersRouter.js";
 import chalk from "chalk";
 
 const app = express();
@@ -13,5 +14,6 @@ dotenv.config();
 
 app.use(authRouter);
 app.use(linksRouter);
+app.use(usersRouter)
 
 app.listen(process.env.PORT, () => console.log(chalk.green.bold("O servidor está rodando")));
