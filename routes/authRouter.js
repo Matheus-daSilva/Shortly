@@ -3,7 +3,7 @@ import { signInConttroler, signUpConttroler } from "../controllers/authConttrole
 import { schemaValidationSignIn, schemaValidationSignUpUser, schemaValidationSignUpData } from "../middlewares/authMiddleware.js";
 
 const authRouter = express.Router();
-authRouter.post("/signIn", schemaValidationSignIn, signInConttroler);
-authRouter.post("/signUp", schemaValidationSignUpUser, schemaValidationSignUpData, signUpConttroler);
+authRouter.post("/signin", schemaValidationSignIn, signInConttroler);
+authRouter.post("/signup", schemaValidationSignUpUser, schemaValidationSignUpData, signUpConttroler);
 
 export default authRouter;
