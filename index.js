@@ -16,4 +16,5 @@ app.use(authRouter);
 app.use(linksRouter);
 app.use(usersRouter);
 
-app.listen(process.env.PORT, () => console.log(chalk.green.bold("O servidor está rodando")));
+const port = process.env.PORT || 4000;
+app.listen(port, () => console.log(chalk.green.bold("O servidor está rodando")));
